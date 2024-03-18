@@ -1,0 +1,7 @@
+This is a simple implementation of an email server and various clients using the Multicast Design Pattern. The EmailServer and the clients (GmailClient, SMSSubscriber, NotificationClient) act as observers and observants.
+
+To run the application, execute the `Main` class within `EmailServer.java`. This will create instances of the different client types (GmailClient, SMSSubscriber, NotificationClient), register them with the `EmailServer`, and multicast an email to all registered clients.
+
+The output will show the respective messages or notifications printed by each client type upon receiving the email.
+
+This implementation follows the Multicast Design Pattern, where the `EmailServer` and the various client types (GmailClient, SMSSubscriber, NotificationClient) are the observers and observants. The `EmailServer` maintains a list of registered clients and notifies them whenever an email is multicasted by calling their `receiveemail` method.
