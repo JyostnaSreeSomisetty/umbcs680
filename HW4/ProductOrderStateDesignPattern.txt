@@ -1,0 +1,11 @@
+This is an implementation of the State design pattern for a Product Order application.
+
+The ProductOrder class represents a product order and has methods like Order(), ProductOrder(), OrderState(), NewOrderState(), ConfirmedOrderState(), ShippedOrderState(), DeliveredOrderState(), and OrderTest(). Each of these methods delegates the behavior to the current state object.
+
+The OrderState interface defines the common methods that all order state objects must implement. These methods correspond to the operations that can be performed on a product order.
+
+The NewOrderState, ConfirmedOrderState, ShippedOrderState, and DeliveredOrderState classes implement the OrderState interface and define the behavior for each order state. For example, in the NewOrderState, the confirmOrder() method transitions the order to the ConfirmedOrderState, and the cancelOrder() method cancels the order.
+
+The OrderTest class contains JUnit test cases to verify the correct behavior of the product order system in different state transitions.
+
+The State design pattern is used here to encapsulate the behavior of a product order based on its current state. Each state class defines the appropriate behavior for the operations, and the ProductOrder class delegates the operations to the current state object. This separation of concerns makes the code more modular and easier to maintain or extend with new order states in the future.
